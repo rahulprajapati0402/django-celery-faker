@@ -7,6 +7,15 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
 
 app = Celery("core")
 
+###################################################################
+
+# If timezone not supported as expected
+
+# app.conf.enable_utc = False
+# app.conf.update(timezone="Asia/Kolkata")
+
+###################################################################
+
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
 # - namespace='CELERY' means all celery-related configuration keys

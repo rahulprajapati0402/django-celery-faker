@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "home",
+    # celery apps
+    "django_celery_results",
 ]
 
 MIDDLEWARE = [
@@ -106,7 +108,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+# TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Kolkata"
 
 USE_I18N = True
 
@@ -124,8 +127,26 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
+################################################################
+
+# Celery configuration
 CELERY_BROKER_URL = "redis://127.0.0.1:6379"
-CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379"
+
+# =============================================
+# To store celery results
+
+# On redis
+# CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379"
+
+# On django db
+CELERY_RESULT_BACKEND = "django-db"
+# =============================================
+
 CELERY_ACCEPT_CONTENT = ["application/json"]
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TASK_SERIALIZER = "json"
+
+# If timezone not worked as expected
+# CELERY_TIMEZONE = "Asia/Kolkata"
+
+################################################################

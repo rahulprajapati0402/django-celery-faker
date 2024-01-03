@@ -4,6 +4,14 @@ Basic setup in django for :
 - celery
 - faker
 
+Command to run redis server for windows :
+<br>
+```celery -A project_name worker -l info -P eventlet```
+
+Command to run redis server for linux :
+<br>
+```celery -A project_name worker -l info```
+
 # Creating virtual environment Linux
 
 ```

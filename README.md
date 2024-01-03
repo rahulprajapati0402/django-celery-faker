@@ -6,11 +6,17 @@ Basic setup in django for :
 
 Command to run redis server for windows :
 <br>
-```celery -A project_name worker -l info -P eventlet```
+(Use any one)
+```
+celery -A project_name worker -l info -P eventlet
+celery -A core worker --pool=solo -l info
+```
 
 Command to run redis server for linux :
 <br>
-```celery -A project_name worker -l info```
+```
+celery -A project_name worker -l info
+```
 
 # Creating virtual environment Linux
 

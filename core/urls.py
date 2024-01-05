@@ -23,5 +23,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name="home"),
     path("generate-excel/", generate_excel, name="generate_excel"),
+    path("send-mail/", send_email_to_users, name="send_mail"),
     path("<task_id>/", check_status, name="check_status"),
 ]

@@ -18,6 +18,12 @@ Command to run redis server for linux :
 celery -A project_name worker -l info
 ```
 
+Command to run celery beat :
+<br>
+```
+celery -A project_name beat -l info
+```
+
 # Creating virtual environment Linux
 
 ```

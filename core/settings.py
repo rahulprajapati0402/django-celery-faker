@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "home",
     # celery apps
     "django_celery_results",
+    "django_celery_beat",
 ]
 
 MIDDLEWARE = [
@@ -159,3 +160,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = "rahul.cilans@gmail.com"
 EMAIL_HOST_PASSWORD = ""
 EMAIL_USE_TLS = True
+
+
+# CELERY BEAT SCHEDULER
+CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"

@@ -15,6 +15,9 @@ import uuid
 def home(request):
     # time.sleep(10)
     data = handle_sleep.delay()
+    print("================================")
+    print(data.__dict__)
+    print("================================")
     return HttpResponseRedirect(data.task_id)
 
 

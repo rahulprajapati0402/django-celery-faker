@@ -9,7 +9,7 @@ Command to run redis server for windows :
 (Use any one)
 ```
 celery -A project_name worker -l info -P eventlet
-celery -A core worker --pool=solo -l info
+celery -A project_name worker --pool=solo -l info
 ```
 
 Command to run redis server for linux :
